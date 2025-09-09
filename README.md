@@ -113,13 +113,22 @@ export EMBEDDING_MODEL=nomic-embed-text  # Change embedding model
 ## Future Topics
 
 We will create another LangChain deep dive covering advanced techniques for:
-- **Text Splitting**:
-  - Character-based vs semantic splitting
-  - Optimal chunk sizes for different use cases
-  - Overlap strategies for context preservation
-- **Retrieval Methods**:
-  - Similarity search vs maximum marginal relevance
-  - Hybrid search combining keywords and embeddings
-  - Custom retrievers for domain-specific applications
 
-This will help you choose the best approach for your specific RAG implementation.
+### Text Splitting Methods:
+- **Character-based Splitting**: Simple splitting by fixed character count
+- **Token-based Splitting**: Splitting by token count (respects token boundaries)
+- **Semantic Splitting**: Splitting at natural semantic boundaries
+- **Overlap Strategies**: Context-preserving overlap between chunks
+
+### Retrieval Techniques:
+- **Basic Similarity Search**: Standard vector similarity retrieval
+- **Maximum Marginal Relevance (MMR)**: Balances relevance and diversity
+- **LLM-aided Retrieval**: Uses LLMs to refine retrieval queries
+- **Compression Techniques**: Summarizes retrieved content to fit context
+
+### Context Window Solutions:
+- **Map-Reduce**: Processes long documents in parallel chunks
+- **Refining**: Iteratively improves answers through multiple passes
+- **Map-Rerank**: Scores and reranks multiple candidate answers
+
+These techniques will help optimize RAG performance for different document types and use cases.
